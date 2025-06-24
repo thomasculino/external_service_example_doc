@@ -1,0 +1,12 @@
+[project]
+name = "example_external_service"
+version = "0.1.0"
+description = "A fake micro-service to display the use of external services."
+authors = [
+  { name = "Thomas Culino", email = "thomas.culino@gmail.com" }
+]
+readme = "README.md"
+dependencies = []
+
+[tool.skyportal]
+version = ">=1.4.0"

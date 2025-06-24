@@ -1,1 +1,0 @@
-# external_service_example_doc
