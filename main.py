@@ -1,17 +1,14 @@
-from time import time
-
-from baselayer.app.env import load_env
+import time
 from baselayer.log import make_log
 
-env, cfg = load_env()
 log = make_log("example_external_service")
 
-params = cfg.get("services.external.example_external_service.params", {})
-
 def main():    
+    start_time = time.time()
     while True:
-      log.info(f"Running example_external_service for {time()} seconds")
-      time.sleep(5)
+      elapsed_time = time.time() - start_time
+      log(f"Running example_external_service for {elapsed_time} seconds")
+      time.sleep(2)
 
 if __name__ == "__main__":
     main()
